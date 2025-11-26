@@ -1,6 +1,5 @@
 __pycache__/
 cache_train/
 cache_val/
-*.pth
 *.pt
 .DS_Store
