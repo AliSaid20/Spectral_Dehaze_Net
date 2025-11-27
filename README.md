@@ -132,7 +132,14 @@ python infer.py \
 
  Spectrogram Results
 
+###Epoch 1 Result
+![Result after 1 epoch](visuals/epoch_001.png)
 
+###Epoch 32 Result
+![Result after 32 epoch](visuals/epoch_032.png)
+
+###Epoch 58 Result (Best)
+![Result after 58 epoch](visuals/epoch_058.png)
 
  Inspiration & Acknowledgement
 
