@@ -1,5 +1,4 @@
-
- Spectral Dehazing U-Net
+# Spectral Dehazing U-Net
 
 Spectral Illumination–Guided Noise Removal for Vocal Recordings
 
@@ -18,7 +17,7 @@ This repo includes:
 
 ---
 
- Key Idea
+## Key Idea
 
 Image dehazing separates haze veil from the true scene.
 Here, we treat noise like “audio haze.”
@@ -31,7 +30,7 @@ This lets the model separate noise structurally, not just with brute-force filte
 
 ---
 
-🧠 Model Overview
+## Model Overview
 
 Hybrid U-Net Structure
 
@@ -50,7 +49,7 @@ U-Net → mask + veil → gated clean estimate → output
 
 ---
 
-🛠 Features
+## Features
 
 ✔ Illumination Estimation (Veil Layer)
 
@@ -76,7 +75,7 @@ We preprocess once → store as ".pt" tensors → training becomes 20–40× fas
 
 ---
 
- Repository Structure
+## Repository Structure
 
 .
 ├── code/
@@ -91,7 +90,7 @@ We preprocess once → store as ".pt" tensors → training becomes 20–40× fas
 
 ---
 
- Preprocessing
+## Preprocessing
 
 Run once:
 
@@ -110,7 +109,7 @@ cache/
 
 ---
 
-🧪 Training
+## Training
 
 python train.py --cache_dir ./cache --epochs 60
 
@@ -121,7 +120,7 @@ checkpoints/
 
 ---
 
- Inference
+## Inference
 
 python infer.py \
   --input noisy.wav \
@@ -130,28 +129,28 @@ python infer.py \
 
 ---
 
- Spectrogram Results
+## Spectrogram Results
 
-###Epoch 1 Result
+### Epoch 1 Result
 ![Result after 1 epoch](visuals/epoch_001.png)
 
-###Epoch 32 Result
+### Epoch 32 Result
 ![Result after 32 epoch](visuals/epoch_032.png)
 
-###Epoch 58 Result (Best)
+### Epoch 58 Result (Best)
 ![Result after 58 epoch](visuals/epoch_058.png)
 
- Inspiration & Acknowledgement
+## Inspiration & Acknowledgement
 
-This work is inspired by ideas from single-image dehazing research, specifically:
+This work is inspired by ideas from image dehazing research, specifically:
 
 - Veil layer estimation (illumination modeling)
 - Transmission map estimation
 - Guided-filter style refinement
 - Atmospheric scattering model
 
-Original concepts appear in:
-“Single Image Haze Removal Using … (Fan Guo et al.)”
+## Original concepts appear in:
+### “Image Dehazing Based on Haziness Analysis (Fan Guo, Jin Tang, Zi-Xing Cai.)”
 
 The project does not copy the method directly — instead, it reinterprets dehazing concepts for audio spectrogram denoising, with a completely different architecture and loss design.
 
@@ -159,7 +158,7 @@ No authors contributed to this audio model; only the conceptual inspiration is c
 
 ---
 
-🧭 Roadmap
+## Roadmap
 
 - Add Griffin-Lim / neural vocoder for even better reconstruction
 - Add Mel spectrogram mode
@@ -169,12 +168,12 @@ No authors contributed to this audio model; only the conceptual inspiration is c
 
 ---
 
-🤝 Contributions
+## Contributions
 
 Feel free to fork, PR, or open issues.
 
 ---
 
-⭐ If This Helped
+## If This Helped
 
 Drop a star on the repo — it motivates the grind :)
